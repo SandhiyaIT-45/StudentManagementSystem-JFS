@@ -43,9 +43,16 @@ async function loadStudents() {
                 <td>${student.department}</td>
                 <td>${student.email}</td>
                 <td>${student.marks}</td>
+                <td><button onclick="deleteStudent(${student.id})">Delete</button></td>
             </tr>
         `;
     });
 }
 
 loadStudents();
+async function deleteStudent(id){
+    await fetch(`http://localhost:8080/students/${id}`,{
+        method: "DELETE"
+    });
+   loadStudents();
+}
