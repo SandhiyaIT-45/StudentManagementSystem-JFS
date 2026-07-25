@@ -10,10 +10,10 @@
 
     <form id="studentForm">
         <input type="text" id="name" placeholder="Name" required>
-        <input type="number" id="age" placeholder="Age" required>
+        <input type="number" id="age" placeholder="Age" min="1" required>
         <input type="text" id="department" placeholder="Department" required>
         <input type="email" id="email" placeholder="Email" required>
-        <input type="number" id="marks" placeholder="Marks" required>
+        <input type="number" id="marks" placeholder="Marks" min="0" max="100" required>
 
         <button type="submit">Add Student</button>
         <button type="button" id="updateButton" onclick="updateStudent()" style="display:none;">
